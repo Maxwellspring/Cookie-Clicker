@@ -1,30 +1,44 @@
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    background-color: rgb(58, 165, 42);
 }
 
 #cookie-stuff {
-    height: 90%;
+    width: 50%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(20, 43, 220);
 }
 
 #Cookie {
     width: 250px;
     height: 250px;
     border-radius: 100%;
-    background-color: rgb(163, 92, 0);
+    /* background-color: rgb(163, 92, 0); */
+    background-image: radial-gradient(rgb(200, 113, 0), rgb(200, 113, 0), rgb(146, 83, 0));
     color: white;
 }
 
 #Cookie:hover {
-    background-color: rgb(140, 79, 0);
+    background-image: radial-gradient(rgb(165, 94, 0), rgb(165, 94, 0), rgb(114, 65, 0));
 }
 
 #Cookie:active {
-    background-color: rgb(97, 55, 0);
+    background-image: radial-gradient(rgb(132, 75, 0), rgb(132, 75, 0), rgb(92, 52, 0));
+}
+
+#Buttons {
+    width: 50%;
+    height: 100vh;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
