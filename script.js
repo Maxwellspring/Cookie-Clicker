@@ -1,16 +1,19 @@
-let price = 10
+let multPrice = 10
 let multiplier = 1
 let clicks = 0
 
 function addToMuliplyer() {
-    if (clicks >= price) {
-        clicks = clicks - price;
+    if (clicks >= multPrice) {
+        clicks = clicks - multPrice;
         multiplier++
-        price++
+        multPrice = Math.ceil(multPrice * 1.5 - 3) 
+
     }
+
+    document.getElementById("multPrice").innerHTML = `multiplier price is ${multPrice} clicks`
     document.getElementById("count").innerHTML = `cookie clicks is ${clicks} clicks`
     document.getElementById("multiplier").innerHTML = `Mulitplier is ${multiplier}x`
-    return [multiplier, clicks, price]
+    return [multiplier, clicks, multPrice]
 }
 
 function count() {
