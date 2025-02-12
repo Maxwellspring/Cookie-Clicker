@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cookie-stuff {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Cookie {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgb(163, 92, 0);
+    color: white;
+}
+
+#Cookie:hover {
+    background-color: rgb(140, 79, 0);
+}
+
+#Cookie:active {
+    background-color: rgb(97, 55, 0);
+}
