@@ -1,3 +1,7 @@
+* {
+    margin: 0%;
+}
+
 body {
     height: 100vh;
     display: flex;
@@ -23,6 +27,12 @@ body {
     /* background-color: rgb(163, 92, 0); */
     background-image: radial-gradient(rgb(200, 113, 0), rgb(200, 113, 0), rgb(146, 83, 0));
     color: white;
+    /* border-color: rgb(16, 34, 177); */
+    border-left: 0px rgb(16, 34, 177);
+    border-right: 0px rgb(16, 34, 177);
+    border-bottom: 5px rgb(16, 34, 177);
+    border-top: 0px rgb(16, 34, 177);
+    border-style: solid;
 }
 
 #Cookie:hover {
@@ -36,7 +46,7 @@ body {
 #Buttons {
     width: 50%;
     height: 100vh;
-    background-color: cornflowerblue;
+    background-color: rgb(99, 148, 237);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,4 +57,31 @@ body {
     background-color: rgb(11, 218, 159);
     padding: 5px;
     border-radius: 7px;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.greenbutton {
+    /* border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px;
+    border-top: 0px; */
+    background-color: rgb(22, 165, 0);
+    color: white;
+    padding: 5px;
+    border-color: rgb(0, 78, 0);
+    border-style: solid;
+    border-radius: 5px;
+    
+}
+
+.greenbutton:hover {
+    /* border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-top: 2px;
+    border-color: rgb(66, 99, 158); */
+    background-color: rgb(15, 116, 0);
+    border-color: rgb(0, 57, 0);
+
 }
