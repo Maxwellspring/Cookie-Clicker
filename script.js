@@ -1,12 +1,13 @@
 let multPrice = 10
 let multiplier = 1
 let clicks = 0
+let passiveClickers = 0
 
 function addToMuliplyer() {
     if (clicks >= multPrice) {
         clicks = clicks - multPrice;
         multiplier++
-        multPrice = Math.ceil(multPrice * 1.5 - 3) 
+        multPrice = Math.ceil(multPrice * 1.5 - 3)
 
     }
 
@@ -26,3 +27,23 @@ function count() {
     return clicks
 
 }
+
+function passiveClickerP1() {
+    passiveClickers++
+    return passiveClickers
+}
+
+function passiveClickerP2() {
+
+    // document.getElementById("passiveClickerPrice").innerHTML = `Passive Clickers is 0`
+
+    let compoundedClicks = passiveClickers * 10
+
+    clicks = clicks + compoundedClicks
+
+    document.getElementById("count").innerHTML = `cookie clicks is ${clicks} clicks`
+
+    return clicks
+}
+
+setInterval(passiveClickerP2, 1000)
