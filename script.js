@@ -57,3 +57,5 @@ function updateDisplay() {
 }
 
 setInterval(updateDisplay, 100)
+
+// const worker = Worker("counter.js")
