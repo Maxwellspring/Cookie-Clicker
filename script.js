@@ -1,6 +1,6 @@
 let multPrice = 10
 let multiplier = 1
-let clicks = 0
+let clicks = 1000
 let passiveClickers = 0
 let passivePrice = 100
 let spentClicks = 0
@@ -40,8 +40,8 @@ function Gambler() {
     if (clicks >= GamblerPrice) {
         spentClicks = spentClicks - GamblerPrice;
         clicks = clicks - GamblerPrice;
-        clicks = clicks + Math.abs(Math.floor((Math.random()* 5000) - 1500))
-        GamblerPrice = Math.ceil((Math.random() * 10) * 1000)
+        clicks = clicks + Math.abs(Math.floor((Math.random()* 5000) - 3700))
+        GamblerPrice = Math.ceil((Math.random() * 10) * 400)
         document.getElementById("Gambler").innerHTML = `Gambler price is ${GamblerPrice} clicks`
         return [clicks, GamblerPrice]
     }
