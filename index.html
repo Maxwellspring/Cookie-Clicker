@@ -11,6 +11,10 @@
 
 <body>
     <div id="not-cookie">
+        <section id="goal-display">
+            <p>PROGRESS TO 1 MIL. CLICKS</p>
+            <progress id="progress" value="0" max="1000000">32%</progress>
+        </section>
         <section id="cookie-display">
             <p id="count">cookie clicks is 0 clicks</p>
             <p id="spent">spent clicks is 0 clicks</p>
@@ -24,6 +28,10 @@
             <br>
             <p id="Gambler">Gambler price is 1000 clicks</p>
             <button class="greenbutton" type="button" id="Gambler" onclick="Gambler()">Gamble?</button>
+            <br>
+            <p id="Cheat">Cheat Code</p>
+            <input type="text" name="input" id="cheatText">
+            <button class="greenbutton" type="button" id="CheatButton" onclick="cheat()">?</button>
         </section>
     </div>
     <section id="cookie-stuff">

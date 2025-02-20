@@ -1,6 +1,6 @@
 let multPrice = 10
 let multiplier = 1
-let clicks = 1000
+let clicks = 0
 let passiveClickers = 0
 let passivePrice = 100
 let spentClicks = 0
@@ -40,11 +40,30 @@ function Gambler() {
     if (clicks >= GamblerPrice) {
         spentClicks = spentClicks - GamblerPrice;
         clicks = clicks - GamblerPrice;
-        clicks = clicks + Math.abs(Math.floor((Math.random()* 5000) - 3700))
+        clicks = clicks + Math.abs(Math.floor((Math.random() * 5000) - 3700))
         GamblerPrice = Math.ceil((Math.random() * 10) * 400)
         document.getElementById("Gambler").innerHTML = `Gambler price is ${GamblerPrice} clicks`
         return [clicks, GamblerPrice]
     }
+}
+
+function progressBar() {
+    let progBar = document.getElementById("progress");
+    progBar.value = clicks;
+}
+
+function cheat() {
+    let inputThing = document.getElementById("cheatText").value
+
+    if (inputThing == "click") {
+        clicks += 100000
+        document.getElementById("CheatButton").innerHTML = "Success!"
+    } else if (inputThing == "win") {
+        clicks += 1000000
+    } else {
+        document.getElementById("CheatButton").innerHTML = "?"
+    }
+    return clicks
 }
 
 function updateDisplay() {
@@ -53,8 +72,11 @@ function updateDisplay() {
     document.getElementById("spent").innerHTML = `spent clicks is ${fixedSpentClicks} clicks`
     let compoundedClicks = passiveClickers * 1
     clicks = clicks + compoundedClicks
+    progressBar()
     return clicks
 }
+
+
 
 setInterval(updateDisplay, 100)
 
