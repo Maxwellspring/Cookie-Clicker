@@ -145,3 +145,10 @@ progress::-webkit-progress-value {
     background-color: rgb(72, 215, 1);
     border-radius: 5px;
 }
+
+#cheatText {
+    width: 90%;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(0, 104, 173);
+}
