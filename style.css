@@ -147,8 +147,16 @@ progress::-webkit-progress-value {
 }
 
 #cheatText {
-    width: 90%;
+    width: 50%;
     border-radius: 5px;
     border-style: solid;
     border-color: rgb(0, 104, 173);
+}
+
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 10%;
+    outline: rgba(255, 0, 0, 0);
 }

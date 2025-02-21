@@ -1,10 +1,11 @@
-let multPrice = 10
-let multiplier = 1
 let clicks = 0
-let passiveClickers = 0
-let passivePrice = 100
 let spentClicks = 0
 let GamblerPrice = 1000
+let multPrice = 10
+let multiplier = 1
+let passivePrice = 100
+let passiveClickers = 0
+
 
 function addToMuliplyer() {
     if (clicks >= multPrice) {
@@ -70,32 +71,24 @@ function cheat() {
 }
 
 function restore() {
-    multPrice = window.localStorage.getItem("multPrice")
-    multiplier = window.localStorage.getItem("muliplier")
-    clicks = window.localStorage.getItem("count")
-    passiveClickers = window.localStorage.getItem("passiveClicker")
-    passivePrice = window.localStorage.getItem("passiveClickerPrice")
-    spentClicks = window.localStorage.getItem("spent")
-    GamblerPrice = window.localStorage.getItem("Gambler")
-    return [clicks, multPrice, multiplier, passiveClickers, spentClicks, GamblerPrice]
+    multPrice = parseInt(localStorage.getItem("multPrice"));
+    multiplier = parseInt(localStorage.getItem("multiplier"));
+    clicks = parseInt(localStorage.getItem("clicks"));
+    passiveClickers = parseInt(localStorage.getItem("passiveClickers"));
+    passivePrice = parseInt(localStorage.getItem("passivePrice"));
+    spentClicks = parseInt(localStorage.getItem("spentClicks"));
+    GamblerPrice = parseInt(localStorage.getItem("GamblerPrice"));
+    return [clicks, multPrice, multiplier, passiveClickers, spentClicks, GamblerPrice];
 }
 
 function save() {
-    window.localStorage.removeItem("count")
-    window.localStorage.removeItem("spent")
-    window.localStorage.removeItem("Gambler")
-    window.localStorage.removeItem("multPrice")
-    window.localStorage.removeItem("muliplier")
-    window.localStorage.removeItem("passiveClickerPrice")
-    window.localStorage.removeItem("passiveClicker")
-    
-    window.localStorage.setItem("count", clicks)
-    window.localStorage.setItem("spent", fixedSpentClicks)
-    window.localStorage.setItem("Gambler", GamblerPrice)
-    window.localStorage.setItem("multPrice", multPrice)
-    window.localStorage.setItem("muliplier", multiplier)
-    window.localStorage.setItem("passiveClickerPrice", passivePrice)
-    window.localStorage.setItem("passiveClicker", passiveClickers)
+    localStorage.setItem("clicks", clicks.toString());
+    localStorage.setItem("spentClicks", spentClicks.toString());
+    localStorage.setItem("GamblerPrice", GamblerPrice.toString());
+    localStorage.setItem("multPrice", multPrice.toString());
+    localStorage.setItem("multiplier", multiplier.toString());
+    localStorage.setItem("passivePrice", passivePrice.toString());
+    localStorage.setItem("passiveClickers", passiveClickers.toString());
 }
 
 function updateDisplay() {
